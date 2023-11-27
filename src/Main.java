@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculadoraDeTempo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -8,8 +9,10 @@ public class Main {
         favorito.setAnoDeLancamento(1972);
         favorito.setDuracaoEmMinutos(175);
         favorito.setIncluiNoPlano(true);
+        favorito.setDiretor("Francis Ford Coppola");
 
         favorito.exibaFichaTecnica();
+        System.out.println("Nome do Diretor: "+ favorito.getDiretor());
 
         favorito.availa(9.5);
         favorito.availa(7);
@@ -27,7 +30,15 @@ public class Main {
         lost.setTemporadas(6);
         lost.setMinutosPorEpisodio(48);
 
+
         lost.exibaFichaTecnica();
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+
+        calculadora.inclui(favorito);
+        calculadora.inclui(lost);
+
+        System.out.println(calculadora.getTempoTotal());
 
     }
 }
