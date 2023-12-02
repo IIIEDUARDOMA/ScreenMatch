@@ -1,4 +1,6 @@
-import br.com.alura.screenmatch.calculadoraDeTempo.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltraRecomendados;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -62,6 +64,11 @@ public class Main {
         laCasaDePapel.setTemporadas(5);
         laCasaDePapel.setMinutosPorEpisodio(45);
 
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(100);
+
 
         laCasaDePapel.exibaFichaTecnica();
 
@@ -74,5 +81,10 @@ public class Main {
 
         System.out.println("\nTempo total para assistir filmes e series selecionados: " + calculadora.getTempoTotal() + " minutos");
 
+
+        FiltraRecomendados recomendados = new FiltraRecomendados();
+
+        recomendados.filtra(favorito);
+        recomendados.filtra(episodio);
     }
 }

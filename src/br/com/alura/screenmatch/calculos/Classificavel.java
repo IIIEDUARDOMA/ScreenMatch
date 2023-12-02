@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.calculadoraDeTempo;
+package br.com.alura.screenmatch.calculos;
 
 public interface Classificavel {
     int getClassificacao();

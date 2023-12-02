@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.calculadoraDeTempo;
+package br.com.alura.screenmatch.calculos;
 
 import br.com.alura.screenmatch.modelos.Titulo;
 
