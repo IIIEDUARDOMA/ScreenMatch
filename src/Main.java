@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Filme favorito = new Filme();
@@ -38,9 +40,24 @@ public class Main {
         johnWick.availa(8.7);
 
         System.out.println("\nTotal de Avaliações: " + johnWick.getTotalDeAvaliacoes());
-        System.out.println("\nNota média do Filme: " + johnWick.obtemMedia() + "minutos");
+        System.out.println("\nNota média do Filme: " + johnWick.obtemMedia());
 
+        Filme piratasDoCaribe = new Filme();
+        piratasDoCaribe.setNome( "Piratas do Caribe: A Maldição do Pérola Negra");
+        piratasDoCaribe.setAnoDeLancamento(2003);
+        piratasDoCaribe.setDuracaoEmMinutos(143);
+        piratasDoCaribe.setIncluiNoPlano(true);
+        piratasDoCaribe.setDiretor("Gore Verbinski");
 
+        piratasDoCaribe.exibaFichaTecnica();
+        System.out.println("Nome do Diretor: "+ piratasDoCaribe.getDiretor());
+
+        piratasDoCaribe.availa(9);
+        piratasDoCaribe.availa(9);
+        piratasDoCaribe.availa(8);
+
+        System.out.println("\nTotal de Avaliações: " + piratasDoCaribe.getTotalDeAvaliacoes());
+        System.out.println("\nNota média do Filme: " + piratasDoCaribe.obtemMedia());
 
 
         Serie lost = new Serie();
@@ -86,5 +103,15 @@ public class Main {
 
         recomendados.filtra(favorito);
         recomendados.filtra(episodio);
+
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(piratasDoCaribe);
+        listaDeFilmes.add(johnWick);
+
+        System.out.println("\nTamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome() + " (" + listaDeFilmes.getFirst().getAnoDeLancamento() + ")");
+        System.out.println("Lista de filmes; " + listaDeFilmes);
     }
 }
