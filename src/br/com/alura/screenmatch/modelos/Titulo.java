@@ -1,6 +1,10 @@
 package br.com.alura.screenmatch.modelos;
 
 public class Titulo {
+    public Titulo(String nome, int lancamento) {
+        this.setNome(nome);
+        this.setAnoDeLancamento(lancamento);
+    }
     private String nome;
     private int anoDeLancamento;
     private boolean incluiNoPlano;

@@ -8,26 +8,23 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme favorito = new Filme();
-        favorito.setNome( "O Poderoso Chefão");
-        favorito.setAnoDeLancamento(1972);
-        favorito.setDuracaoEmMinutos(175);
-        favorito.setIncluiNoPlano(true);
-        favorito.setDiretor("Francis Ford Coppola");
+        Filme oPoderosoChefao = new Filme("O Poderoso Chefão", 1972);
+        oPoderosoChefao.setDuracaoEmMinutos(175);
+        oPoderosoChefao.setIncluiNoPlano(true);
+        oPoderosoChefao.setDiretor("Francis Ford Coppola");
 
-        favorito.exibaFichaTecnica();
-        System.out.println("Nome do Diretor: "+ favorito.getDiretor());
+        oPoderosoChefao.exibaFichaTecnica();
+        System.out.println("Nome do Diretor: "+ oPoderosoChefao.getDiretor());
 
-        favorito.availa(9.5);
-        favorito.availa(7);
-        favorito.availa(10);
+        oPoderosoChefao.availa(9.5);
+        oPoderosoChefao.availa(7);
+        oPoderosoChefao.availa(10);
 
-        System.out.println("\nTotal de Avaliações: " + favorito.getTotalDeAvaliacoes());
-        System.out.println("\nNota média do Filme: " + favorito.obtemMedia());
+        System.out.println("\nTotal de Avaliações: " + oPoderosoChefao.getTotalDeAvaliacoes());
+        System.out.println("\nNota média do Filme: " + oPoderosoChefao.obtemMedia());
 
-        Filme johnWick = new Filme();
-        johnWick.setNome( "John Wick - De Volta ao Jogo");
-        johnWick.setAnoDeLancamento(2014);
+        Filme johnWick = new Filme("John Wick - De Volta ao Jogo", 2014);
+//        johnWick.setNome( "John Wick - De Volta ao Jogo");
         johnWick.setDuracaoEmMinutos(101);
         johnWick.setIncluiNoPlano(true);
         johnWick.setDiretor("Chad Stahelski");
@@ -42,9 +39,8 @@ public class Main {
         System.out.println("\nTotal de Avaliações: " + johnWick.getTotalDeAvaliacoes());
         System.out.println("\nNota média do Filme: " + johnWick.obtemMedia());
 
-        Filme piratasDoCaribe = new Filme();
-        piratasDoCaribe.setNome( "Piratas do Caribe: A Maldição do Pérola Negra");
-        piratasDoCaribe.setAnoDeLancamento(2003);
+        Filme piratasDoCaribe = new Filme("Piratas do Caribe: A Maldição do Pérola Negra", 2003);
+
         piratasDoCaribe.setDuracaoEmMinutos(143);
         piratasDoCaribe.setIncluiNoPlano(true);
         piratasDoCaribe.setDiretor("Gore Verbinski");
@@ -60,9 +56,8 @@ public class Main {
         System.out.println("\nNota média do Filme: " + piratasDoCaribe.obtemMedia());
 
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2004);
+        Serie lost = new Serie("Lost", 2004);
+
         lost.setEpisodiosPorTemporada(14);
         lost.setAtiva(true);
         lost.setIncluiNoPlano(true);
@@ -72,9 +67,7 @@ public class Main {
 
         lost.exibaFichaTecnica();
 
-        Serie laCasaDePapel = new Serie();
-        laCasaDePapel.setNome("La Casa De Papel");
-        laCasaDePapel.setAnoDeLancamento(2019);
+        Serie laCasaDePapel = new Serie("La Casa De Papel", 2019);
         laCasaDePapel.setEpisodiosPorTemporada(22);
         laCasaDePapel.setAtiva(true);
         laCasaDePapel.setIncluiNoPlano(true);
@@ -91,7 +84,7 @@ public class Main {
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
 
-        calculadora.inclui(favorito);
+        calculadora.inclui(oPoderosoChefao);
         calculadora.inclui(johnWick);
         calculadora.inclui(lost);
         calculadora.inclui(laCasaDePapel);
@@ -101,12 +94,12 @@ public class Main {
 
         FiltraRecomendados recomendados = new FiltraRecomendados();
 
-        recomendados.filtra(favorito);
+        recomendados.filtra(oPoderosoChefao);
         recomendados.filtra(episodio);
 
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(oPoderosoChefao);
         listaDeFilmes.add(piratasDoCaribe);
         listaDeFilmes.add(johnWick);
 
