@@ -104,7 +104,7 @@ public class Main {
         listaDeFilmes.add(johnWick);
 
         System.out.println("\nTamanho da lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome() + " (" + listaDeFilmes.getFirst().getAnoDeLancamento() + ")");
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome() + " (" + listaDeFilmes.get(0).getAnoDeLancamento() + ")");
         System.out.println("Lista de filmes; " + listaDeFilmes);
     }
 }
