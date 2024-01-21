@@ -26,7 +26,7 @@ public class PrincipalComListas {
             if (item instanceof Filme filme && filme.getClassificacao() >2){
                 System.out.println("Classificação do Filme: " + filme.getClassificacao());
             }
-        };
+        }
 
        ArrayList<String> buscaPorArtista = new ArrayList<>();
        buscaPorArtista.add("Keanu Reeves");
